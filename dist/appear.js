@@ -24,8 +24,8 @@ appear = (function(){
   function viewable(el, bounds){
     var rect = el.getBoundingClientRect();
     return (
-      (rect.top + rect.height) >= 0 &&
-      (rect.left + rect.width) >= 0 &&
+      (rect.top + rect.height) > 0 &&
+      (rect.left + rect.width) > 0 &&
       (rect.bottom - rect.height) <= ( (window.innerHeight || document.documentElement.clientHeight) + bounds) &&
       (rect.right - rect.width) <= ( (window.innerWidth || document.documentElement.clientWidth) + bounds)
     );
